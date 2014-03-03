@@ -13,14 +13,26 @@ Use
 
     parseXlsx('Spreadsheet.xlsx', function(err, data) {
     	if(err) throw err;
-        // data is an array of arrays
+        // data is an array of arrays of object
     });
     
 If you have multiple sheets in your spreadsheet, 
 
     parseXlsx('Spreadsheet.xlsx', '2', function(err, data) {
     	if(err) throw err;
-        // data is an array of arrays
+        // data is an array of arrays of object
+    });
+
+If you want to get multiple sheets from your spreadsheet,
+set to argument start and end of your spreadsheet
+    
+    var start = 1;
+    var end = 5;
+
+    parseXlsx('Spreadsheet.xlsx', start, end, function(err, data) {
+    	if(err) throw err;
+        // data is an array of arrays of object
+    
     });
     
 MIT License.
